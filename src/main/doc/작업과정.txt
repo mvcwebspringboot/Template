@@ -1,0 +1,39 @@
+마이바티즈와 JPA를 동시에 사용하는 프로젝트 세팅
+
+★★★★★ build.gradle
+  web
+  thymeleaf
+  devtools
+  
+  jdbc
+  mysql-connector-j
+  mybatis-spring-boot-starter:3.0.3
+  data-jpa
+  
+  lombok
+  validation  
+  
+  implementation 'org.springframework.boot:spring-boot-starter-log4j2:3.2.2'
+  implementation 'org.modelmapper:modelmapper:3.2.0'
+ 
+ 
+★★★★★ application.properties
+
+configurations {
+  compileOnly {
+    extendsFrom annotationProcessor
+  }
+  all {
+    exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+  }   
+}
+  
+
+
+
+
+
+
+
+
+
